@@ -1,0 +1,11 @@
+[MSVC Status File]
+Version=1.00
+ProjectType=10
+External=1
+DebugBuildCmd=NMAKE /f MAKEFILE
+ReleaseBuildCmd=NMAKE /f MAKEFILE
+RebuildOption=/a
+BuildMode=0
+TargetName=D:\DEVLOP\AST541\astrodos.EXE
+BrkptCount=0
+WatchCount=0

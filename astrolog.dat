@@ -1,0 +1,107 @@
+@0308  ; Astrolog (5.40) default settings file astrolog.dat
+
+-z0 0             ; Default Daylight time setting   [0 standard, 1 daylight]
+-z -1:00          ; Default time zone               [hours before GMT      ]
+-zl   8E35 47N36  ; Default longitude and latitude
+
+-Yz -540   ; Time minute addition to be used when "now" charts are off.
+-n      ; Uncomment this line to start with the chart for "now".
+
+_s      ; Zodiac selection          ["_s" is tropical, "=s" is sidereal]
+:s 0    ; Zodiac offset value       [Change "0" to desired offset      ]
+-A 5    ; Number of aspects         [Change "5" to desired number      ]
+-c 0    ; House system              [Change "0" to desired system      ]
+_k      ; Ansi color text           ["=k" is color, "_k" is normal     ]
+:d 12   ; Searching divisions       [Change "12" to desired divisions  ]
+_b0     ; Print zodiac seconds      ["_b0" to minute, "=b0" to second  ]
+=b      ; Use ephemeris files       ["=b" uses them, "_b" doesn't      ]
+_C      ; Show house cusp objects   ["_C" hides them, "=C" shows them  ]
+:w 4    ; Wheel chart text rows     [Change "4" to desired wheel rows  ]
+:I 80   ; Text screen columns       [Change "80" to desired columns    ]
+-YQ 24  ; Text screen scroll limit  [Change "24" or set to "0" for none]
+_Yd     ; European date format      ["_Yd" is MDY, "=Yd" is DMY        ]
+_Yt     ; European time format      ["_Yt" is AM/PM, "=Yt" is 24 hour  ]
+=YC     ; Smart cusp displays       ["=YC" is smart, "_YC" is normal   ]
+_Y8     ; Clip text to end of line  ["=Y8" clips, "_Y8" doesn't clip   ]
+
+
+; DEFAULT RESTRICTIONS:
+
+-YR 1 10     0 0 0 0 0 0 0 0 0 0      ; Planets
+-YR 11 20    0 1 1 1 1 0 1 1 1 1      ; Minor planets
+-YR 21 32    1 1 1 1 1 1 1 1 1 1 1 1  ; House cusps
+-YR 33 40    1 1 1 1 1 1 1 1          ; Uranians
+
+; DEFAULT TRANSIT RESTRICTIONS:
+
+-YRT 1 10    0 1 0 0 0 0 0 0 0 0      ; Planets
+-YRT 11 20   0 0 0 0 0 0 0 1 1 1      ; Minor planets
+-YRT 21 32   1 1 1 1 1 1 1 1 1 1 1 1  ; House cusps
+-YRT 33 40   1 1 1 1 1 1 1 1          ; Uranians
+
+-YR0 0 0  ; Restrict sign, direction changes
+
+
+; DEFAULT ASPECT ORBS:
+
+-YAo 1 5     7.0 7.0 7.0 7.0 6.0      ; Major aspects
+-YAo 6 11    3.0 3.0 3.0 3.0 2.0 2.0    ; Minor aspects
+-YAo 12 18   1.0 1.0 1.0 1.0 1.0 1.0 1.0  ; Obscure aspects
+
+; DEFAULT MAX PLANET ASPECT ORBS:
+
+-YAm 1 10    360 360 360 360 360 360 360 360 360 360
+-YAm 11 20   360 360 360 360 360   2   2 360 360   2
+-YAm 21 32   360 360 360 360 360 360 360 360 360 360 360 360
+-YAm 33 40   360 360 360 360 360 360 360 360
+
+; DEFAULT PLANET ASPECT ORB ADDITIONS:
+
+-YAd 1 10    1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+-YAd 11 20   0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+-YAd 21 32   0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+
+
+; DEFAULT INFLUENCES:
+
+-Yj 1 10    30 25 10 10 10 10 10 10 10 10        ; Planets
+-Yj 11 20   5 5 5 5 5 5 5 5 5 5                  ; Minor planets
+-Yj 21 32   20 10 10 10 10 10 10 10 10 15 10 10  ; Cusp objects
+-Yj 33 40   3 3 3 3 3 3 3 3                      ; Uranians
+
+-YjC 1 12   20 0 0 10 0 0 5 0 0 15 0 0  ; Houses
+
+-YjA 1 5    1.0 0.8 0.8 0.6 0.6          ; Major aspects
+-YjA 6 11   0.4 0.4 0.2 0.2 0.2 0.2      ; Minor aspects
+-YjA 12 18  0.1 0.1 0.1 0.1 0.1 0.1 0.1  ; Obscure aspects
+
+; DEFAULT TRANSIT INFLUENCES:
+
+-YjT 1 10    10 4 8 9 20 30 35 40 45 50  ; Planets
+-YjT 11 20   30 15 15 15 15 30 1 1 1 1   ; Minor planets
+-YjT 33 40   50 50 50 50 50 50 50 50     ; Uranians
+
+-Yj0 20 10 15 5 ; In ruling sign, exalted sign, ruling house, exalted house.
+
+
+; DEFAULT COLORS:
+
+-YkC 9 11 10 12                 ; Element colors
+-YkA 1 18  11 12 9 10 14 13 13 3 3 6 6 6 1 5 5 1 1 5  ; Aspect colors
+-Yk0 1 7   9 3 11 10 14 12 5    ; Rainbow colors
+-Yk  0 8   0 15 7 8 1 2 6 4 13  ; Main colors
+
+
+; GRAPHICS DEFAULTS:
+
+_X              ; Graphics chart flag ["_X" is text, "=X" is graphics]
+:Xw 480 480     ; Default X and Y resolution
+:Xbb            ; Bitmap file type
+:YXG 1111       ; Glyph selections
+:YXg 20         ; Aspect grid cells
+:YXf 0          ; Use actual fonts
+:YXp 0          ; PostScript paper orientation
+:YXp0 8.5 11.0  ; PostScript paper X and Y inch sizes
+:YX -1 16       ; PC hi-res and lo-res graphics modes
+
+; astrolog.dat
